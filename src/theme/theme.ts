@@ -9,6 +9,17 @@ export const theme = {
                 backgroundColor: "blue",
                 color: "white"
             }
+        },
+        container: {
+            default: {
+                backgroundColor: "gray",
+            },
+            primary: {
+                backgroundColor: "blue",
+            },
+            secondary: {
+                backgroundColor: "orange",
+            }
         }
     }
 }

@@ -23,6 +23,10 @@ export interface Props {
      * display
      */
     display?: "initial" | "inherit" | "block" | "inline-block"
+    /**
+     * fontsize
+     */
+    fontSize?: number
 }
 
 const Typography: React.FC<Props> = (props) => {
@@ -30,6 +34,7 @@ const Typography: React.FC<Props> = (props) => {
         <StyledTypography as={props.component}
                           display={props.display}
                           textAlign={props.align}
+                          fontSize={props.fontSize}
                           variant={props.variant}>{props.children}</StyledTypography>
     )
 }

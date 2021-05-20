@@ -252,3 +252,6 @@ storybook-static/
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,node,storybookjs,react
 /.idea/
+
+.floo
+.flooignore

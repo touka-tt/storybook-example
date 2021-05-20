@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {ReactNode} from 'react'
 import styled, {ThemeProvider} from "styled-components"
 import { variant } from "styled-system"
 import {theme} from "../theme/theme";
 
 export interface ButtonProps {
     /**
-    * Button contents
-    */
-    label: string
+     * Start Icon
+     */
+    startIcon?: ReactNode
+    /**
+     * End Icon
+     */
+    endIcon?: ReactNode
+    /**
+     * children
+     */
+    children?: ReactNode
     /**
     * Optional click handler
     */
@@ -28,7 +36,7 @@ export interface ButtonProps {
 const Button: React.FC<ButtonProps> = (props) => {
     return (
         <ThemeProvider theme={theme}>
-            <StyledButton variant={props.variant} onClick={props.onClick} disabled={props.disabled}>{props.label}</StyledButton>
+            <StyledButton variant={props.variant} onClick={props.onClick} disabled={props.disabled}>{props.startIcon}{props.children}{props.endIcon}</StyledButton>
         </ThemeProvider>
     )
 }
@@ -40,6 +48,9 @@ Button.defaultProps = {
 
 const variants = {
     primary: {
+        svg: {
+           fill: "#ffffff",
+        },
         color: '#ffffff',
         backgroundColor: '#1D3461',
         border: 'none',

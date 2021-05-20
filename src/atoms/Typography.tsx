@@ -81,9 +81,9 @@ Typography.defaultProps = {
 }
 
 const StyledTypography = styled.p<LayoutProps & TypographyProps & StyledTypographyProps>`
+  ${variant({variants})}
   ${typography}
   ${layout}
-  ${variant({variants})}
 `
 
 export default Typography
